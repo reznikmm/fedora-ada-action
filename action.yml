@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2020 Max Reznik <reznikmm@gmail.com>
+# SPDX-License-Identifier: MIT
+
+name: 'Build Ada project'
+description: 'Build the project on Fedora Linux'
+inputs:
+  spec:
+    description: 'Path to .spec file'
+    required: true
+    default: 'rpm.spec'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.spec }}
