@@ -10,7 +10,7 @@ RUN curl -o /etc/yum.repos.d/bintray-reznikmm-matreshka.repo \
  dnf --assumeyes install gcc-gnat && \
  dnf --assumeyes install gprbuild && \
  dnf --assumeyes install make && \
-useradd user && \
+useradd --uid 1001 user && \
 su -c rpmdev-setuptree user
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
