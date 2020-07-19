@@ -27,7 +27,7 @@ List of built RPMs separated by colon (`:`).
       - uses: actions/checkout@v2
         with:
           path: ada-pretty
-      - uses: reznikmm/fedora-ada-action@v1
+      - uses: reznikmm/fedora-ada-action@v2
         with:
           spec: ada-pretty/packages/travis/ada-pretty.spec
       - uses: hpcsc/upload-bintray-docker-action@v1

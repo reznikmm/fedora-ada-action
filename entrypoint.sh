@@ -8,7 +8,7 @@ set -e -x
 
 do_user()
 {
-  su -c "$*" user
+  su -l -c "$*" user
 }
 
 SPEC=${GITHUB_WORKSPACE}/$1
