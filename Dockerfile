@@ -1,10 +1,10 @@
-# SPDX-FileCopyrightText: 2020 Max Reznik <reznikmm@gmail.com>
+# SPDX-FileCopyrightText: 2020-2021 Max Reznik <reznikmm@gmail.com>
 # SPDX-License-Identifier: MIT
 #
 
-FROM fedora
-RUN curl -o /etc/yum.repos.d/bintray-reznikmm-matreshka.repo \
- https://bintray.com/reznikmm/matreshka/rpm && \
+FROM fedora:33
+RUN curl -o /etc/yum.repos.d/reznik-ada.repo \
+ https://copr.fedorainfracloud.org/coprs/reznik/ada/repo/fedora-33/reznik-ada-fedora-33.repo && \
  dnf --assumeyes install rpmdevtools && \
  dnf --assumeyes install dnf-plugins-core && \
  dnf --assumeyes install fedora-gnat-project-common && \
