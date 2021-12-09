@@ -2,9 +2,9 @@
 # SPDX-License-Identifier: MIT
 #
 
-FROM fedora:34
+FROM fedora:35
 RUN curl -o /etc/yum.repos.d/reznik-ada.repo \
- https://copr.fedorainfracloud.org/coprs/reznik/ada/repo/fedora-34/reznik-ada-fedora-34.repo && \
+ https://copr.fedorainfracloud.org/coprs/reznik/ada/repo/fedora-35/reznik-ada-fedora-35.repo && \
  dnf --assumeyes install rpmdevtools && \
  dnf --assumeyes install dnf-plugins-core && \
  dnf --assumeyes install fedora-gnat-project-common && \
