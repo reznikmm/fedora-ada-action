@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 #
 
-FROM fedora:34
+FROM fedora:35
 RUN curl -o /etc/yum.repos.d/reznik-ada.repo \
  https://copr.fedorainfracloud.org/coprs/reznik/ada/repo/fedora-34/reznik-ada-fedora-34.repo && \
  dnf --assumeyes install rpmdevtools && \
